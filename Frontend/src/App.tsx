@@ -24,7 +24,7 @@ function App() {
 
   useEffect(() => {
     if (creds.name.trim() !== '') {
-     const socket = new WebSocket(`ws://localhost:8000/join?name=${creds.name}`); 
+     const socket = new WebSocket(`wss://chat-room-go-backend.up.railway.app/join?name=${creds.name}`); 
       setWs(p => {
         if (p) p.close(); 
         return socket;
